@@ -1,6 +1,7 @@
 # decorator-regex
 
 [![npm](https://img.shields.io/npm/v/@flex-development/decorator-regex.svg)](https://npmjs.com/package/@flex-development/decorator-regex)
+[![codecov](https://codecov.io/github/flex-development/decorator-regex/branch/main/graph/badge.svg?token=NO3rVfx9OF)](https://codecov.io/github/flex-development/decorator-regex)
 [![module type: esm](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://github.com/voxpelli/badges-cjs-esm)
 [![license](https://img.shields.io/github/license/flex-development/decorator-regex.svg)](LICENSE.md)
 [![conventional commits](https://img.shields.io/badge/-conventional%20commits-fe5196?logo=conventional-commits&logoColor=ffffff)](https://conventionalcommits.org/)
