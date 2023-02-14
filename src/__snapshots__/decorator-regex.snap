@@ -1,0 +1,530 @@
+// Vitest Snapshot v1
+
+exports[`unit:DECORATOR_REGEX > decorators > should match multi-line decorators 1`] = `
+[
+  {
+    "0": "@Table<User>({
+  defaultScope: {
+    attributes: User.KEYS,
+    order: [['id', OrderDirection.ASC]],
+    raw: false
+  },
+  deletedAt: false,
+  hooks: {
+    /**
+     * Normalizes data before a user is persisted to the database.
+     *
+     * This includes:
+     *
+     * - Trimming string fields and forcing those fields to be
+     *   lowercased
+     * - Setting defaults for users registered with an
+     *   {@linkcode OAuthProvider}
+     *
+     * @param {User} instance - Current user instance
+     * @return {void} Nothing when complete
+     */
+    beforeSave(instance: User): void {
+      trimmedLowercasedFields(instance.dataValues)
+
+      if (User.AUTH_PROVIDERS.includes(instance.provider!)) {
+        instance.email_verified = true
+        instance.password = null
+      }
+    }
+  },
+  omitNull: false,
+  paranoid: false,
+  tableName: DatabaseTable.USERS,
+  timestamps: true
+})",
+    "1": "Table",
+    "2": "({
+  defaultScope: {
+    attributes: User.KEYS,
+    order: [['id', OrderDirection.ASC]],
+    raw: false
+  },
+  deletedAt: false,
+  hooks: {
+    /**
+     * Normalizes data before a user is persisted to the database.
+     *
+     * This includes:
+     *
+     * - Trimming string fields and forcing those fields to be
+     *   lowercased
+     * - Setting defaults for users registered with an
+     *   {@linkcode OAuthProvider}
+     *
+     * @param {User} instance - Current user instance
+     * @return {void} Nothing when complete
+     */
+    beforeSave(instance: User): void {
+      trimmedLowercasedFields(instance.dataValues)
+
+      if (User.AUTH_PROVIDERS.includes(instance.provider!)) {
+        instance.email_verified = true
+        instance.password = null
+      }
+    }
+  },
+  omitNull: false,
+  paranoid: false,
+  tableName: DatabaseTable.USERS,
+  timestamps: true
+})",
+    "groups": {
+      "identifier": "Table",
+      "parameters": "({
+  defaultScope: {
+    attributes: User.KEYS,
+    order: [['id', OrderDirection.ASC]],
+    raw: false
+  },
+  deletedAt: false,
+  hooks: {
+    /**
+     * Normalizes data before a user is persisted to the database.
+     *
+     * This includes:
+     *
+     * - Trimming string fields and forcing those fields to be
+     *   lowercased
+     * - Setting defaults for users registered with an
+     *   {@linkcode OAuthProvider}
+     *
+     * @param {User} instance - Current user instance
+     * @return {void} Nothing when complete
+     */
+    beforeSave(instance: User): void {
+      trimmedLowercasedFields(instance.dataValues)
+
+      if (User.AUTH_PROVIDERS.includes(instance.provider!)) {
+        instance.email_verified = true
+        instance.password = null
+      }
+    }
+  },
+  omitNull: false,
+  paranoid: false,
+  tableName: DatabaseTable.USERS,
+  timestamps: true
+})",
+    },
+  },
+  {
+    "0": "@ApiProperty({
+      description: 'When user was created', type: Number
+    })",
+    "1": "ApiProperty",
+    "2": "({
+      description: 'When user was created', type: Number
+    })",
+    "groups": {
+      "identifier": "ApiProperty",
+      "parameters": "({
+      description: 'When user was created', type: Number
+    })",
+    },
+  },
+  {
+    "0": "@Column({
+      allowNull: false,
+      defaultValue: User.CURRENT_TIMESTAMP,
+      type: DataType.BIGINT,
+      validate: { isUnixTimestamp: User.isUnixTimestamp }
+    })",
+    "1": "Column",
+    "2": "({
+      allowNull: false,
+      defaultValue: User.CURRENT_TIMESTAMP,
+      type: DataType.BIGINT,
+      validate: { isUnixTimestamp: User.isUnixTimestamp }
+    })",
+    "groups": {
+      "identifier": "Column",
+      "parameters": "({
+      allowNull: false,
+      defaultValue: User.CURRENT_TIMESTAMP,
+      type: DataType.BIGINT,
+      validate: { isUnixTimestamp: User.isUnixTimestamp }
+    })",
+    },
+  },
+  {
+    "0": "@ApiProperty({
+      description: 'Email address',
+      maxLength: 254,
+      minLength: 3,
+      type: String
+    })",
+    "1": "ApiProperty",
+    "2": "({
+      description: 'Email address',
+      maxLength: 254,
+      minLength: 3,
+      type: String
+    })",
+    "groups": {
+      "identifier": "ApiProperty",
+      "parameters": "({
+      description: 'Email address',
+      maxLength: 254,
+      minLength: 3,
+      type: String
+    })",
+    },
+  },
+  {
+    "0": "@Column({
+      allowNull: false,
+      type: DataType.STRING(254),
+      unique: true,
+      validate: { isEmail: true, len: [3, 254] }
+    })",
+    "1": "Column",
+    "2": "({
+      allowNull: false,
+      type: DataType.STRING(254),
+      unique: true,
+      validate: { isEmail: true, len: [3, 254] }
+    })",
+    "groups": {
+      "identifier": "Column",
+      "parameters": "({
+      allowNull: false,
+      type: DataType.STRING(254),
+      unique: true,
+      validate: { isEmail: true, len: [3, 254] }
+    })",
+    },
+  },
+  {
+    "0": "@ApiProperty({
+      description: 'Unique identifier', type: Number
+    })",
+    "1": "ApiProperty",
+    "2": "({
+      description: 'Unique identifier', type: Number
+    })",
+    "groups": {
+      "identifier": "ApiProperty",
+      "parameters": "({
+      description: 'Unique identifier', type: Number
+    })",
+    },
+  },
+  {
+    "0": "@Column({
+      allowNull: false,
+      autoIncrementIdentity: true,
+      defaultValue: Sequelize.fn('nextval', DatabaseSequence.USERS),
+      primaryKey: true,
+      type: 'NUMERIC',
+      unique: true,
+      validate: { notNull: true }
+    })",
+    "1": "Column",
+    "2": "({
+      allowNull: false,
+      autoIncrementIdentity: true,
+      defaultValue: Sequelize.fn('nextval', DatabaseSequence.USERS),
+      primaryKey: true,
+      type: 'NUMERIC',
+      unique: true,
+      validate: { notNull: true }
+    })",
+    "groups": {
+      "identifier": "Column",
+      "parameters": "({
+      allowNull: false,
+      autoIncrementIdentity: true,
+      defaultValue: Sequelize.fn('nextval', DatabaseSequence.USERS),
+      primaryKey: true,
+      type: 'NUMERIC',
+      unique: true,
+      validate: { notNull: true }
+    })",
+    },
+  },
+  {
+    "0": "@ApiProperty({
+      description: 'Authentication provider',
+      enum: OAuthProvider,
+      enumName: 'OAuthProvider',
+      nullable: true
+    })",
+    "1": "ApiProperty",
+    "2": "({
+      description: 'Authentication provider',
+      enum: OAuthProvider,
+      enumName: 'OAuthProvider',
+      nullable: true
+    })",
+    "groups": {
+      "identifier": "ApiProperty",
+      "parameters": "({
+      description: 'Authentication provider',
+      enum: OAuthProvider,
+      enumName: 'OAuthProvider',
+      nullable: true
+    })",
+    },
+  },
+  {
+    "0": "@Column({
+      allowNull: true,
+      defaultValue: null,
+      type: DataType.ENUM(...User.AUTH_PROVIDERS)
+    })",
+    "1": "Column",
+    "2": "({
+      allowNull: true,
+      defaultValue: null,
+      type: DataType.ENUM(...User.AUTH_PROVIDERS)
+    })",
+    "groups": {
+      "identifier": "Column",
+      "parameters": "({
+      allowNull: true,
+      defaultValue: null,
+      type: DataType.ENUM(...User.AUTH_PROVIDERS)
+    })",
+    },
+  },
+  {
+    "0": "@HasMany(() => {
+      return Token
+    })",
+    "1": "HasMany",
+    "2": "(() => {
+      return Token
+    })",
+    "groups": {
+      "identifier": "HasMany",
+      "parameters": "(() => {
+      return Token
+    })",
+    },
+  },
+  {
+    "0": "@ApiProperty({
+      description: 'Full name (virtual property)'
+    })",
+    "1": "ApiProperty",
+    "2": "({
+      description: 'Full name (virtual property)'
+    })",
+    "groups": {
+      "identifier": "ApiProperty",
+      "parameters": "({
+      description: 'Full name (virtual property)'
+    })",
+    },
+  },
+  {
+    "0": "@Column(DataType.VIRTUAL(DataType.STRING, [
+      'first_name',
+      'last_name'
+    ]))",
+    "1": "Column",
+    "2": "(DataType.VIRTUAL(DataType.STRING, [
+      'first_name',
+      'last_name'
+    ]))",
+    "groups": {
+      "identifier": "Column",
+      "parameters": "(DataType.VIRTUAL(DataType.STRING, [
+      'first_name',
+      'last_name'
+    ]))",
+    },
+  },
+]
+`;
+
+exports[`unit:DECORATOR_REGEX > decorators > should match single-line decorators 1`] = `
+[
+  {
+    "0": "@Injectable()",
+    "1": "Injectable",
+    "2": "()",
+    "groups": {
+      "identifier": "Injectable",
+      "parameters": "()",
+    },
+  },
+  {
+    "0": "@logged",
+    "1": "logged",
+    "2": undefined,
+    "groups": {
+      "identifier": "logged",
+      "parameters": undefined,
+    },
+  },
+  {
+    "0": "@InjectModel(User)",
+    "1": "InjectModel",
+    "2": "(User)",
+    "groups": {
+      "identifier": "InjectModel",
+      "parameters": "(User)",
+    },
+  },
+  {
+    "0": "@Inject(CACHE_MANAGER)",
+    "1": "Inject",
+    "2": "(CACHE_MANAGER)",
+    "groups": {
+      "identifier": "Inject",
+      "parameters": "(CACHE_MANAGER)",
+    },
+  },
+  {
+    "0": "@Controller(OPENAPI.controller)",
+    "1": "Controller",
+    "2": "(OPENAPI.controller)",
+    "groups": {
+      "identifier": "Controller",
+      "parameters": "(OPENAPI.controller)",
+    },
+  },
+  {
+    "0": "@ApiTags(...OPENAPI.tags)",
+    "1": "ApiTags",
+    "2": "(...OPENAPI.tags)",
+    "groups": {
+      "identifier": "ApiTags",
+      "parameters": "(...OPENAPI.tags)",
+    },
+  },
+  {
+    "0": "@UseInterceptors(HttpCacheInterceptor)",
+    "1": "UseInterceptors",
+    "2": "(HttpCacheInterceptor)",
+    "groups": {
+      "identifier": "UseInterceptors",
+      "parameters": "(HttpCacheInterceptor)",
+    },
+  },
+  {
+    "0": "@UseGuards(JwtAuthGuard)",
+    "1": "UseGuards",
+    "2": "(JwtAuthGuard)",
+    "groups": {
+      "identifier": "UseGuards",
+      "parameters": "(JwtAuthGuard)",
+    },
+  },
+  {
+    "0": "@Delete(OPENAPI.delete.path)",
+    "1": "Delete",
+    "2": "(OPENAPI.delete.path)",
+    "groups": {
+      "identifier": "Delete",
+      "parameters": "(OPENAPI.delete.path)",
+    },
+  },
+  {
+    "0": "@HttpCode(OPENAPI.delete.status)",
+    "1": "HttpCode",
+    "2": "(OPENAPI.delete.status)",
+    "groups": {
+      "identifier": "HttpCode",
+      "parameters": "(OPENAPI.delete.status)",
+    },
+  },
+  {
+    "0": "@ApiTokenAuth()",
+    "1": "ApiTokenAuth",
+    "2": "()",
+    "groups": {
+      "identifier": "ApiTokenAuth",
+      "parameters": "()",
+    },
+  },
+  {
+    "0": "@ApiResponses(OPENAPI.delete.responses)",
+    "1": "ApiResponses",
+    "2": "(OPENAPI.delete.responses)",
+    "groups": {
+      "identifier": "ApiResponses",
+      "parameters": "(OPENAPI.delete.responses)",
+    },
+  },
+  {
+    "0": "@Param('uid')",
+    "1": "Param",
+    "2": "('uid')",
+    "groups": {
+      "identifier": "Param",
+      "parameters": "('uid')",
+    },
+  },
+  {
+    "0": "@CacheTTL(120)",
+    "1": "CacheTTL",
+    "2": "(120)",
+    "groups": {
+      "identifier": "CacheTTL",
+      "parameters": "(120)",
+    },
+  },
+  {
+    "0": "@Get(OPENAPI.findOne.path)",
+    "1": "Get",
+    "2": "(OPENAPI.findOne.path)",
+    "groups": {
+      "identifier": "Get",
+      "parameters": "(OPENAPI.findOne.path)",
+    },
+  },
+  {
+    "0": "@HttpCode(OPENAPI.findOne.status)",
+    "1": "HttpCode",
+    "2": "(OPENAPI.findOne.status)",
+    "groups": {
+      "identifier": "HttpCode",
+      "parameters": "(OPENAPI.findOne.status)",
+    },
+  },
+  {
+    "0": "@ApiQuery(OPENAPI.findOne.query)",
+    "1": "ApiQuery",
+    "2": "(OPENAPI.findOne.query)",
+    "groups": {
+      "identifier": "ApiQuery",
+      "parameters": "(OPENAPI.findOne.query)",
+    },
+  },
+  {
+    "0": "@ApiResponses(OPENAPI.findOne.responses)",
+    "1": "ApiResponses",
+    "2": "(OPENAPI.findOne.responses)",
+    "groups": {
+      "identifier": "ApiResponses",
+      "parameters": "(OPENAPI.findOne.responses)",
+    },
+  },
+  {
+    "0": "@Param('uid')",
+    "1": "Param",
+    "2": "('uid')",
+    "groups": {
+      "identifier": "Param",
+      "parameters": "('uid')",
+    },
+  },
+  {
+    "0": "@Query(new ValidationPipe({ transform: true }))",
+    "1": "Query",
+    "2": "(new ValidationPipe({ transform: true }))",
+    "groups": {
+      "identifier": "Query",
+      "parameters": "(new ValidationPipe({ transform: true }))",
+    },
+  },
+]
+`;

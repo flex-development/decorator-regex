@@ -3,4 +3,4 @@
  * @module decorator-regex
  */
 
-export {}
+export { default as DECORATOR_REGEX } from './decorator-regex'

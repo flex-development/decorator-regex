@@ -1200,6 +1200,7 @@ __metadata:
     node-notifier: "npm:10.0.1"
     prettier: "npm:2.8.4"
     prettier-plugin-sh: "npm:0.12.8"
+    radash: "npm:10.7.0"
     sade: "npm:1.8.1"
     semver: "npm:7.3.8"
     serve: "npm:14.2.0"
