@@ -8,14 +8,15 @@
  *
  * Ignores matches in comments.
  *
- * Required flags:
+ * Required [flags][1]:
  *
  * - `s`: dot all
  * - `u`: unicode
  *
- * @see https://codeguage.com/courses/regexp/flags
- * @see https://github.com/tc39/proposal-decorators
+ * [1]: https://codeguage.com/courses/regexp/flags
+ *
  * @see https://regex101.com/r/WPavSs
+ * @see https://github.com/tc39/proposal-decorators
  *
  * @const {RegExp} DECORATOR_REGEX
  */

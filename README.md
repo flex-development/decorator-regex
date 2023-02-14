@@ -18,23 +18,25 @@
 - [Install](#install)
 - [Use](#use)
 - [API](#api)
+  - [`DECORATOR_REGEX`](#decorator-regex)
 - [Types](#types)
 - [Related](#related)
 - [Contribute](#contribute)
 
 ## What is this?
 
-This package contains regular expressions for matching [decorators][1]. Decorators are functions called on classes,
-class elements, or other JavaScript and TypeScript syntax forms during definition.
+This package exports a regular expression for matching [decorators][1]. Decorators are functions called on classes,
+class accessors, class fields, class methods, and/or class method parameters.
 
 ## When should I use this?
 
-Regex expressions exported from this package can be used to match decorators in JavaScript and TypeScript source code.
+The regular expression exported from this package can be used to match multi and single-line decorators in JavaScript
+and TypeScript source code.
 
 Note:
 
-- Statements in docblock (`/** */`), multiline (`/* */`), and single-line (`//`) comments are ignored
-- Expressions are ECMAScript-compatible. They have not been tested with other flavors (PCRE, PCRE2, etc)
+- Decorators in comments (`/** */`, `/* */`, `//`) are ignored
+- Regular expression is ECMAScript-compatible. It has **not** been tested with other flavors (PCRE, PCRE2, etc)
 
 ## Install
 
@@ -63,16 +65,31 @@ yarn add @flex-development/decorator-regex@flex-development/decorator-regex
 
 ## API
 
-**TODO**: api documentation.
+This package exports the identifier [`DECORATOR_REGEX`](#decorator-regex).
+
+There is no default export.
+
+### `DECORATOR_REGEX`
+
+Regular expression matching multi and single-line decorators.
+
+Ignores matches in comments.
+
+Required [flags][3]:
+
+- `s`: dot all
+- `u`: unicode
+
+> **Source**: [`src/decorator-regex.ts`](src/decorator-regex.ts)
 
 ## Types
 
-This package is fully typed with [TypeScript][3].
+This package is fully typed with [TypeScript][4].
 
 ## Related
 
-- [`export-regex`][4] &mdash; `export` statement regex
-- [`import-regex`][5] &mdash; `import` statement regex
+- [`export-regex`][5] &mdash; `export` statement regex
+- [`import-regex`][6] &mdash; `import` statement regex
 
 ## Contribute
 
@@ -80,6 +97,7 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 [1]: https://github.com/tc39/proposal-decorators
 [2]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
-[3]: https://www.typescriptlang.org
-[4]: https://github.com/flex-development/export-regex
-[5]: https://github.com/flex-development/import-regex
+[3]: https://codeguage.com/courses/regexp/flags
+[4]: https://www.typescriptlang.org
+[5]: https://github.com/flex-development/export-regex
+[6]: https://github.com/flex-development/import-regex
