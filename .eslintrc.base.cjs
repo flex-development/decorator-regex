@@ -5,6 +5,18 @@
  */
 
 /**
+ * @type {typeof import('./tsconfig.json')}
+ * @const tsconfig - Tsconfig object
+ */
+const tsconfig = require('./tsconfig.json')
+
+/**
+ * @type {boolean}
+ * @const jsx - JSX check
+ */
+const jsx = Boolean(tsconfig.compilerOptions.jsx)
+
+/**
  * @type {import('eslint').Linter.Config}
  * @const config - ESLint configuration object
  */
@@ -22,7 +34,7 @@ const config = {
     BufferEncoding: 'readonly',
     Chai: 'readonly',
     Console: 'readonly',
-    JSX: false,
+    JSX: jsx ? 'readonly' : false,
     LoadHook: 'readonly',
     LoadHookContext: 'readonly',
     LoadHookResult: 'readonly',
@@ -36,9 +48,9 @@ const config = {
   parserOptions: {
     ecmaFeatures: {
       impliedStrict: true,
-      jsx: false
+      jsx
     },
-    emitDecoratorMetadata: true,
+    emitDecoratorMetadata: tsconfig.compilerOptions.emitDecoratorMetadata,
     extraFileExtensions: [],
     project: ['./tsconfig.json'],
     sourceType: 'module',
@@ -790,7 +802,7 @@ const config = {
       }
     },
     {
-      files: ['*.cjs', '*.md/*.cjs', '*.js', '*.jsx', '*.mjs'],
+      files: ['*.cjs', '*.md/*.cjs', '*.mjs'],
       rules: {
         '@typescript-eslint/explicit-module-boundary-types': 0,
         '@typescript-eslint/no-implicit-any-catch': 0
