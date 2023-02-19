@@ -1,5 +1,4 @@
-/// <reference types='@vitest/spy'/>
-/// <reference types='vitest/globals'/>
+/// <reference types='vitest/globals' />
 
 interface ImportMetaEnv {
   readonly BASE_URL: string

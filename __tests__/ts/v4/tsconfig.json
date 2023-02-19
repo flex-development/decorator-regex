@@ -14,7 +14,7 @@
     "forceConsistentCasingInFileNames": true,
     "importsNotUsedAsValues": "error",
     "isolatedModules": true,
-    "lib": ["dom", "es2021"],
+    "lib": ["es2020"],
     "module": "esnext",
     "moduleResolution": "node",
     "newLine": "lf",
@@ -35,10 +35,11 @@
       "#tests/*": ["__tests__/*"]
     },
     "preserveConstEnums": true,
-    "preserveSymlinks": true,
+    "preserveSymlinks": false,
     "pretty": true,
     "resolveJsonModule": true,
     "rootDir": "../../..",
+    "skipDefaultLibCheck": false,
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
@@ -49,13 +50,5 @@
     "useUnknownInCatchVariables": true
   },
   "exclude": ["**/coverage", "**/dist", "**/node_modules"],
-  "include": [
-    "**/**.cjs",
-    "**/**.mjs",
-    "**/**.mts",
-    "**/**.ts",
-    "**/.*.cjs",
-    "__fixtures__/**/*.cts",
-    "__fixtures__/**/*.js"
-  ]
+  "include": ["**/**.cjs", "**/**.mjs", "**/**.mts", "**/**.ts", "**/.*.cjs"]
 }

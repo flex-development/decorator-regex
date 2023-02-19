@@ -1190,6 +1190,7 @@ __metadata:
     conventional-recommended-bump: "npm:6.1.0"
     cross-env: "npm:7.0.3"
     cspell: "npm:6.26.3"
+    dateformat: "npm:5.0.3"
     esbuild: "npm:0.17.8"
     eslint: "npm:8.34.0"
     eslint-config-prettier: "npm:8.6.0"
@@ -3820,6 +3821,13 @@ __metadata:
   version: 2.2.2
   resolution: "dataloader@npm:2.2.2"
   checksum: 73ca3126c7828273b50e982ede9ac7f1bc7ec1df46c91863600ab27889ad508f5ee4ea62ce5fe8c22a598a4066bb47db6e785d3db9c8b48466993dce7e81f4e4
+  languageName: node
+  linkType: hard
+
+"dateformat@npm:5.0.3":
+  version: 5.0.3
+  resolution: "dateformat@npm:5.0.3"
+  checksum: 2220af3a5549a06253f00ecebf20f54d6515ead6108b6fe45ed5beef17ce63cbf3d7946d9e9e4fba736ba342e0f4420352d14b4547a9f3ad70adc2afad40ccc1
   languageName: node
   linkType: hard
 

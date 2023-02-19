@@ -173,11 +173,13 @@
   "eslint.validate": [
     "graphql",
     "javascript",
+    "javascriptreact",
     "json",
     "json5",
     "jsonc",
     "markdown",
     "typescript",
+    "typescriptreact",
     "yaml"
   ],
   "files.associations": {
@@ -226,7 +228,8 @@
   ],
   "npm-intellisense.scanDevDependencies": true,
   "prettier.configPath": ".prettierrc.json",
-  "prettier.enable": false,
+  "prettier.enable": true,
+  "prettier.ignorePath": ".prettierignore",
   "prettier.prettierPath": "node_modules/prettier",
   "prettier.useEditorConfig": true,
   "rewrap.autoWrap.enabled": true,

@@ -1,5 +1,5 @@
 /**
- * @file Changelog Configuration
+ * @file Configuration - Changelog
  * @module config/changelog
  * @see https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-conventionalcommits
  * @see https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-core
