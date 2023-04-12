@@ -256,7 +256,7 @@ jobs:
         run: yarn test:cov --segfault-retry=3
       - id: codecov
         name: Upload coverage report to Codecov
-        uses: codecov/codecov-action@v3.1.1
+        uses: codecov/codecov-action@v3.1.2
         with:
           env_vars: GITHUB_JOB,GITHUB_REF,GITHUB_REF_TYPE,GITHUB_RUN_ID,GITHUB_SHA,GITHUB_WORKSPACE
           fail_ci_if_error: true
