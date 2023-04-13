@@ -5,12 +5,12 @@
     "alwaysStrict": false,
     "baseUrl": "../../..",
     "checkJs": false,
-    "declaration": true,
-    "declarationMap": true,
-    "emitDecoratorMetadata": true,
+    "declaration": false,
+    "declarationMap": false,
+    "emitDecoratorMetadata": false,
     "esModuleInterop": true,
     "exactOptionalPropertyTypes": true,
-    "experimentalDecorators": true,
+    "experimentalDecorators": false,
     "forceConsistentCasingInFileNames": true,
     "importsNotUsedAsValues": "error",
     "isolatedModules": true,
@@ -29,10 +29,10 @@
     "noUnusedParameters": false,
     "outDir": "../../../dist",
     "paths": {
-      "#fixtures/*": ["__fixtures__/*"],
       "#src": ["src/index"],
       "#src/*": ["src/*"],
-      "#tests/*": ["__tests__/*"]
+      "#tests/*": ["__tests__/*"],
+      "@flex-development/decorator-regex": ["dist/index", "src/index"]
     },
     "preserveConstEnums": true,
     "preserveSymlinks": false,
@@ -50,5 +50,5 @@
     "useUnknownInCatchVariables": true
   },
   "exclude": ["**/coverage", "**/dist", "**/node_modules"],
-  "include": ["**/**.cjs", "**/**.mjs", "**/**.mts", "**/**.ts", "**/.*.cjs"]
+  "include": ["**/**.mjs", "**/**.mts", "**/**.ts"]
 }

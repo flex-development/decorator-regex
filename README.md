@@ -472,7 +472,7 @@ This package is fully typed with [TypeScript][4].
 
 ## Related
 
-- [`export-regex`][5] &mdash; `export` statement regex
+- [`decorator-regex`][5] &mdash; `export` statement regex
 - [`import-regex`][6] &mdash; `import` statement regex
 
 ## Contribute
@@ -483,5 +483,5 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 [2]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
 [3]: https://codeguage.com/courses/regexp/flags
 [4]: https://www.typescriptlang.org
-[5]: https://github.com/flex-development/export-regex
+[5]: https://github.com/flex-development/decorator-regex
 [6]: https://github.com/flex-development/import-regex
