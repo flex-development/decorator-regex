@@ -69,7 +69,7 @@
     "typecheck:watch": "vitest typecheck"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.6.1",
+    "@commitlint/cli": "17.6.3",
     "@flex-development/commitlint-config": "1.0.1",
     "@flex-development/esm-types": "1.0.0",
     "@flex-development/mkbuild": "1.0.0-alpha.20",
