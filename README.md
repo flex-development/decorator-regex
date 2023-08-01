@@ -66,7 +66,7 @@ Suppose we have the following module:
 
 ```typescript
 import { DECORATOR_REGEX } from '@flex-development/decorator-regex'
-import { omit } from 'radash'
+import { omit } from '@flex-development/tutils'
 import { dedent } from 'ts-dedent'
 
 const code: string = dedent`

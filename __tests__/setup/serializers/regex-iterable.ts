@@ -4,8 +4,16 @@
  */
 
 import type { RegExpArray } from '#tests/types'
-import { isNumber, isString, type Fn } from '@flex-development/tutils'
-import { get, omit } from 'radash'
+import {
+  cast,
+  get,
+  isArray,
+  isNumber,
+  isString,
+  omit,
+  select,
+  type Fn
+} from '@flex-development/tutils'
 
 expect.addSnapshotSerializer({
   /**
@@ -16,8 +24,11 @@ expect.addSnapshotSerializer({
    * @return {string} `value` as printable string
    */
   print(value: unknown, printer: Fn<[unknown], string>): string {
-    value = [...(value as RegExpArray[])].map(m => omit(m, ['index', 'input']))
-    return printer(value)
+    return printer(
+      select([...cast<RegExpArray[]>(value)], null, m => {
+        return omit(m, ['index', 'input'])
+      })
+    )
   },
   /**
    * Checks if the given `value` is a {@linkcode RegExpArray} array.
@@ -27,9 +38,9 @@ expect.addSnapshotSerializer({
    */
   test(value: unknown): value is RegExpArray[] {
     return (
-      Array.isArray(value) &&
-      isNumber(get(value[0], 'index')) &&
-      isString(get(value[0], 'input'))
+      isArray(value) &&
+      isNumber(get(value, '0.index')) &&
+      isString(get(value, '0.input'))
     )
   }
 })
