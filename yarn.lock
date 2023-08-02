@@ -1129,7 +1129,7 @@ __metadata:
     conventional-changelog-conventionalcommits: "npm:5.0.0"
     conventional-changelog-core: "npm:5.0.2"
     conventional-changelog-writer: "npm:6.0.1"
-    conventional-recommended-bump: "npm:6.1.0"
+    conventional-recommended-bump: "npm:7.0.1"
     cross-env: "npm:7.0.3"
     cspell: "npm:6.31.2"
     dateformat: "npm:5.0.3"
@@ -3799,13 +3799,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-changelog-preset-loader@npm:^2.3.4":
-  version: 2.3.4
-  resolution: "conventional-changelog-preset-loader@npm:2.3.4"
-  checksum: 6b3e90502c2970e4592520a4522b1ea4ef64884e6e99168f372212430e52d3b92bffec21e9d180df0e7feaac645d7c3eee79d181f58305861484cc721c25347d
-  languageName: node
-  linkType: hard
-
 "conventional-changelog-preset-loader@npm:^3.0.0":
   version: 3.0.0
   resolution: "conventional-changelog-preset-loader@npm:3.0.0"
@@ -3849,16 +3842,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-commits-filter@npm:^2.0.7":
-  version: 2.0.7
-  resolution: "conventional-commits-filter@npm:2.0.7"
-  dependencies:
-    lodash.ismatch: "npm:^4.4.0"
-    modify-values: "npm:^1.0.0"
-  checksum: 433c256d6dc95cb990c7c26dd421e8cc3697bce0cc0b7cbf14e57144a727aa17a925afcb14100af30047f048b8e27338cb6726032bc5f949199e667f8b627262
-  languageName: node
-  linkType: hard
-
 "conventional-commits-filter@npm:^3.0.0":
   version: 3.0.0
   resolution: "conventional-commits-filter@npm:3.0.0"
@@ -3869,7 +3852,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-commits-parser@npm:^3.2.0, conventional-commits-parser@npm:^3.2.2":
+"conventional-commits-parser@npm:^3.2.2":
   version: 3.2.4
   resolution: "conventional-commits-parser@npm:3.2.4"
   dependencies:
@@ -3899,21 +3882,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-recommended-bump@npm:6.1.0":
-  version: 6.1.0
-  resolution: "conventional-recommended-bump@npm:6.1.0"
+"conventional-recommended-bump@npm:7.0.1":
+  version: 7.0.1
+  resolution: "conventional-recommended-bump@npm:7.0.1"
   dependencies:
     concat-stream: "npm:^2.0.0"
-    conventional-changelog-preset-loader: "npm:^2.3.4"
-    conventional-commits-filter: "npm:^2.0.7"
-    conventional-commits-parser: "npm:^3.2.0"
-    git-raw-commits: "npm:^2.0.8"
-    git-semver-tags: "npm:^4.1.1"
-    meow: "npm:^8.0.0"
-    q: "npm:^1.5.1"
+    conventional-changelog-preset-loader: "npm:^3.0.0"
+    conventional-commits-filter: "npm:^3.0.0"
+    conventional-commits-parser: "npm:^4.0.0"
+    git-raw-commits: "npm:^3.0.0"
+    git-semver-tags: "npm:^5.0.0"
+    meow: "npm:^8.1.2"
   bin:
     conventional-recommended-bump: cli.js
-  checksum: da6828d53102e0adc9275f2774f1362dcdfa0eafe875c9282b62670a3f4db6430c372060b2d57bb660c4730cb3026828a40ed189e98ae3926ce82434eacf6555
+  checksum: db3aa8ff32249892a1e62a262164a754a20beaf627a011426d3b2be6f30e2f08cd6efbffa5c840bedbf3f121b848887a2511cadcd945a5f218efbeee3324a47a
   languageName: node
   linkType: hard
 
@@ -5444,7 +5426,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"git-raw-commits@npm:^2.0.11, git-raw-commits@npm:^2.0.8":
+"git-raw-commits@npm:^2.0.11":
   version: 2.0.11
   resolution: "git-raw-commits@npm:2.0.11"
   dependencies:
@@ -5479,18 +5461,6 @@ __metadata:
     gitconfiglocal: "npm:^1.0.0"
     pify: "npm:^2.3.0"
   checksum: dcb49970c5b4595d4f448d738c71c444e15118cd26ec5995b8d23389534b95b5899db33a9918f017bbbfa314f8639287224f3e693ae40cd9b263ca4bfde97b68
-  languageName: node
-  linkType: hard
-
-"git-semver-tags@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "git-semver-tags@npm:4.1.1"
-  dependencies:
-    meow: "npm:^8.0.0"
-    semver: "npm:^6.0.0"
-  bin:
-    git-semver-tags: cli.js
-  checksum: 2ad103caf6f406ace3e0de9b8ad524ec468c17ec360500b5ccb560c3d643fc15cf0dde77ae5898f36f05de5efdcc5d4a0d801b3d8b4c053e1a3bcb57c2e9c391
   languageName: node
   linkType: hard
 
@@ -7334,7 +7304,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"modify-values@npm:^1.0.0, modify-values@npm:^1.0.1":
+"modify-values@npm:^1.0.1":
   version: 1.0.1
   resolution: "modify-values@npm:1.0.1"
   checksum: e105d01f60cfe4d3f449e97bdffb14df406089fcccebf1484aea1223ca334f047ca2df7378324d060e39b4e3a3d2961e3c4e48423d9703d2898d085ac4e1480a
